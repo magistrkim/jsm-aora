@@ -7,12 +7,34 @@ import { images } from "../constants";
 export default function App() {
   return (
     <SafeAreaView className="h-full bg-primary">
-          <ScrollView contentContainerStyle={{height: "100%"}}>
-              <View className="w-full h-full justify-center items-center px-4">
-                  <Image source={images.logo} resizeMode="contain" className="w-[130px] h-[84px]"/>
-                  <Image source={images.cards} resizeMode="contain" className="max-w-[380px] w-full h-[300px]"/>
-              </View>
-        </ScrollView>
+      <ScrollView contentContainerStyle={{ height: "100%" }}>
+        <View className="w-full h-[85%] justify-center items-center px-4">
+          <Image
+            source={images.logo}
+            resizeMode="contain"
+            className="w-[130px] h-[84px]"
+          />
+          <Image
+            source={images.cards}
+            resizeMode="contain"
+            className="max-w-[380px] w-full h-[300px]"
+          />
+          <View className="relative mt-5">
+            <Text className="text-white font-bold text-center text-3xl">
+              Discover Endless Possibilities with{" "}
+              <Text className="text-secondary-200">Aora</Text>
+            </Text>
+            <Image
+              source={images.path}
+              className="absolute w-[136px] h-[15px] -bottom-2 -right-8"
+              resizeMode="contain"
+            />
+          </View>
+          <Text className="text-gray-100 mt-7 font-pregular text-center text-sm">
+            Where creativity meets innovation: embark on a journey of limitless exploration with Aora
+          </Text>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
