@@ -3,6 +3,7 @@ import { Image, ScrollView, Text, View } from "react-native";
 import { Link } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../constants";
+import CustomButton from "../components/CustomButton";
 
 export default function App() {
   return (
@@ -31,8 +32,14 @@ export default function App() {
             />
           </View>
           <Text className="text-gray-100 mt-7 font-pregular text-center text-sm">
-            Where creativity meets innovation: embark on a journey of limitless exploration with Aora
+            Where creativity meets innovation: embark on a journey of limitless
+            exploration with Aora
           </Text>
+          <CustomButton
+            title="Continue with Email"
+            handlePress={() => {}}
+            containerStyles="w-full mt-7"
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
