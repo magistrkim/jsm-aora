@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../../constants";
 import FormField from "../../components/FormField";
+import CustomButton from "./../../components/CustomButton";
 
 const SignIn = () => {
   const [form, setForm] = useState({
@@ -22,7 +23,7 @@ const SignIn = () => {
             Sign in to Aora
           </Text>
           <FormField
-            title="Email"
+            title="E-mail"
             value={form.email}
             handleChangeText={(event) => setForm({ ...form, email: event })}
             otherStyles="mt-7"
@@ -34,6 +35,7 @@ const SignIn = () => {
             handleChangeText={(event) => setForm({ ...form, password: event })}
             otherStyles="mt-7"
           />
+          <CustomButton title="SignIn" />
         </View>
       </ScrollView>
     </SafeAreaView>
