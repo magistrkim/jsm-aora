@@ -1,7 +1,6 @@
 import {
   View,
   Text,
-  ScrollView,
   Image,
   KeyboardAvoidingView,
   Keyboard,
@@ -39,10 +38,10 @@ const SignIn = () => {
               Sign in to Aora
             </Text>
             <FormField
-              title="E-mail"
+              title="Email"
               value={form.email}
               handleChangeText={(event) => setForm({ ...form, email: event })}
-              otherStyles="mt-7"
+              otherStyles="mt-5"
               keyboardType="email-address"
             />
             <FormField
@@ -51,7 +50,7 @@ const SignIn = () => {
               handleChangeText={(event) =>
                 setForm({ ...form, password: event })
               }
-              otherStyles="mt-7"
+              otherStyles="mt-5"
             />
             <CustomButton
               title="Sign In"
@@ -59,7 +58,7 @@ const SignIn = () => {
               containerStyles="mt-7"
               isLoading={isSubmitting}
             />
-            <View className="justify-center gap-2 flex-row pt-5">
+            <View className="justify-center gap-2 flex-row pt-2">
               <Text className="text-gray-100 text-lg font-pregular">
                 Do not have an account yet?
               </Text>
