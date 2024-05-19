@@ -9,7 +9,7 @@ const GlobalProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    getCurrentUser
+    getCurrentUser()
       .then((res) => {
         if (res) {
           setIsLoggedIn(true);
@@ -35,3 +35,5 @@ const GlobalProvider = ({ children }) => {
     </GlobalContext.Provider>
   );
 };
+
+export default GlobalProvider;
