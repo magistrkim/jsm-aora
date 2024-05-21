@@ -3,6 +3,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../../constants";
 import SearchInput from "../../components/SearchInput";
+import Trending from "../../components/Trending";
 
 const Home = () => {
   return (
@@ -32,7 +33,13 @@ const Home = () => {
                 />
               </View>
             </View>
-            <SearchInput/>
+            <SearchInput />
+            <View className="pt-5 pb-8 flex-1 w-full">
+              <Text className="font-pregular mb-3 text-2lg text-gray-100">
+                Latest Videos
+              </Text>
+              <Trending/>
+            </View>
           </View>
         )}
       />
