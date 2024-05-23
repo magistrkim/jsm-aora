@@ -35,12 +35,17 @@ const Home = () => {
             </View>
             <SearchInput />
             <View className="pt-5 pb-8 flex-1 w-full">
-              <Text className="font-pregular mb-3 text-2lg text-gray-100">
+              <Text className="font-pregular mb-3 text-lg text-gray-100">
                 Latest Videos
               </Text>
-              <Trending/>
+              <Trending posts={[{ id: 1 }, { id: 2 }, { id: 3 }] ?? []} />
             </View>
           </View>
+        )}
+        ListEmptyComponent={() => (
+          <Text className="font-pregular mb-3 text-lg text-white">
+            Empty
+          </Text>
         )}
       />
     </SafeAreaView>
