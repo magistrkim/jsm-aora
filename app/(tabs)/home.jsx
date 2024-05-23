@@ -44,7 +44,12 @@ const Home = () => {
             </View>
           </View>
         )}
-        ListEmptyComponent={() => <EmptyState />}
+        ListEmptyComponent={() => (
+          <EmptyState
+            title="No Videos Found"
+            subtitle="Be the first one to upload a video"
+          />
+        )}
       />
     </SafeAreaView>
   );
