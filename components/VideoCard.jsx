@@ -1,5 +1,6 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { icons } from "../constants";
 
 const VideoCard = ({
   video: {
@@ -9,9 +10,59 @@ const VideoCard = ({
     creator: { username, avatar },
   },
 }) => {
+  const [play, setPlay] = useState(false);
   return (
-    <View className="flex-col px-4 justify-center mb-14">
-      <Text className="font-psemibold text-xl text-white">{title}</Text>
+    <View className="flex-col px-4 items-center mb-14">
+      <View className="flex-row items-start gap-3">
+        <View className="items-center justify-center flex-row flex-1">
+          <View className="w-[46px] h-[46px] rounded-lg border border-secondary justify-center items-center p-0.5">
+            <Image
+              source={{ uri: avatar }}
+              className="w-full h-full rounded-md"
+              resizeMode="cover"
+            />
+          </View>
+          <View className="ml-3 justify-center gap-y-1 flex-1">
+            <Text
+              className="font-psemibold text-sm text-white"
+              numberOfLines={1}
+            >
+              {title}
+            </Text>
+            <Text
+              className="font-regular text-xs text-gray-100"
+              numberOfLines={1}
+            >
+              {username}
+            </Text>
+          </View>
+        </View>
+        <View className="pt-2">
+          <Image source={icons.menu} className="w-5 h-5" resizeMode="contain" />
+        </View>
+      </View>
+      {play ? (
+        <Text className="font-psemibold text-sm text-white">
+          Video is playing
+        </Text>
+      ) : (
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => setPlay(true)}
+          className="w-full h-60 rounded-xl mt-3 relative justify-center items-center"
+        >
+          <Image
+            source={{ uri: thumbnail }}
+            className="w-full h-full rounded-xl mt-3"
+            resizeMode="cover"
+          />
+          <Image
+            source={icons.play}
+            className="w-12 h-12 absolute"
+            resizeMode="contain"
+          />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
