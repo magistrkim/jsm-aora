@@ -1,16 +1,11 @@
-import { View, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, TextInput, TouchableOpacity, Image, Alert } from "react-native";
 import React, { useState } from "react";
 import { icons } from "../constants";
+import { router, usePathname } from "expo-router";
 
-const SearchInput = ({
-  title,
-  value,
-  placeholder,
-  handleChangeText,
-  otherStyles,
-  ...props
-}) => {
-  //   const [showPassword, setShowPassword] = useState(false);
+const SearchInput = () => {
+  const pathname = usePathname();
+  const [query, setQuery] = useState("");
   return (
     <View
       className="border-2 border-[#0c2320] w-full h-16 bg-[#0f2a26] px-4 
@@ -18,12 +13,23 @@ const SearchInput = ({
     >
       <TextInput
         className="text-white text-base font-pregular flex-1 mt-0.5"
-        value={value}
+        value={query}
         placeholder="Search for a video topic"
-        placeholderTextColor="#7b7b8b"
-        onChangeText={handleChangeText}
+        placeholderTextColor="#CDCDE0"
+        onChangeText={(event) => setQuery(event)}
       />
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity
+        onPress={() => {
+          if (!query) {
+            return Alert.alert(
+              "Missing query",
+              "Please input something to search results across database"
+            );
+          }
+          if (pathname.startsWith("/search")) router.setParams({ query });
+          else router.push(`/search/${query}`);
+        }}
+      >
         <Image source={icons.search} className="w-6 h-6" resizeMode="contain" />
       </TouchableOpacity>
     </View>
