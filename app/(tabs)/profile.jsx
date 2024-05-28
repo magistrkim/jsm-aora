@@ -1,20 +1,20 @@
-import { View, Text, FlatList } from "react-native";
+import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
 import React, { useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import SearchInput from "../../components/SearchInput";
 import EmptyState from "../../components/EmptyState";
 import useAppwrite from "../../lib/useAppwrite";
 import VideoCard from "../../components/VideoCard";
-import { searchPosts } from "./../../lib/appwrite";
-import { useLocalSearchParams } from "expo-router";
+import { getUserPosts } from "./../../lib/appwrite";
+import { useGlobalContext } from "./../../context/GlobalProvider";
+import { icons } from "../../constants";
+import InfoBox from "../../components/InfoBox";
 
 const Profile = () => {
-  const { query } = useLocalSearchParams();
-  const { data: posts, refetch } = useAppwrite(() => searchPosts(query));
+  const { user, setUser, isLoggedIn } = useGlobalContext();
+  const { data: posts } = useAppwrite(() => getUserPosts(user.$id));
 
-  useEffect(() => {
-    refetch();
-  }, [query]);
+  const logout = () => {};
 
   return (
     <SafeAreaView className="h-full bg-primary">
@@ -23,14 +23,25 @@ const Profile = () => {
         keyExtractor={(item) => item.$id}
         renderItem={({ item }) => <VideoCard video={item} />}
         ListHeaderComponent={() => (
-          <View className="my-6 px-4">
-            <Text className="text-sm text-gray-100 font-pmedium">
-              Search Results
-            </Text>
-            <Text className="font-psemibold text-2xl text-white">{query}</Text>
-            <View className="mt-6 mb-8">
-              <SearchInput initialQuery={query} />
+          <View className="w-full justify-center items-center mt-6 mb-12 px-4">
+            <TouchableOpacity
+              className="w-full items-end mb-10"
+              onPress={logout}
+            >
+              <Image
+                source={icons.logout}
+                resizeMode="contain"
+                className="w-6 h-6"
+              />
+            </TouchableOpacity>
+            <View className="w-16 h-16 border border-secondary rounded-lg justify-center items-center">
+              <Image
+                source={{ uri: user?.avatar }}
+                className="w-[90%] h-[90%] rounded-md"
+                resizeMode="cover"
+              />
             </View>
+            <InfoBox/>
           </View>
         )}
         ListEmptyComponent={() => (
