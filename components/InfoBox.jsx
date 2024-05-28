@@ -1,10 +1,15 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const InfoBox = () => {
+const InfoBox = ({ title, containerStyles, titleStyles, subtitle }) => {
   return (
-    <View>
-      <Text className="font-psemibold text-2xl text-white">InfoBox</Text>
+    <View className={containerStyles}>
+      <Text className={`text-white text-center font-psemibold ${titleStyles}`}>
+        {title}
+      </Text>
+      <Text className="text-gray-100 text-center text-sm font-pregular">
+        {subtitle}
+      </Text>
     </View>
   );
 };

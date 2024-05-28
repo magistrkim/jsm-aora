@@ -1,7 +1,6 @@
-import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
-import React, { useEffect } from "react";
+import { View, FlatList, TouchableOpacity, Image } from "react-native";
+import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import SearchInput from "../../components/SearchInput";
 import EmptyState from "../../components/EmptyState";
 import useAppwrite from "../../lib/useAppwrite";
 import VideoCard from "../../components/VideoCard";
@@ -41,7 +40,24 @@ const Profile = () => {
                 resizeMode="cover"
               />
             </View>
-            <InfoBox/>
+            <InfoBox
+              title={user?.username}
+              containerStyles="mt-5"
+              titleStyles="text-lg"
+            />
+            <View className="mt-5 flex-row">
+              <InfoBox
+                title={posts.length || 0}
+                containerStyles="mr-10"
+                titleStyles="text-xl"
+                subtitle="Posts"
+              />
+              <InfoBox
+                title="1.2k"
+                subtitle="Followers"
+                titleStyles="text-xl"
+              />
+            </View>
           </View>
         )}
         ListEmptyComponent={() => (
