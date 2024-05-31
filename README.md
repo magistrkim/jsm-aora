@@ -18,3 +18,5 @@
 ✔️ **Completely Responsive**: Consistent access and optimal viewing on any device with a fully responsive design that adapts to different screen sizes.
 
 and many more, including code architecture and reusability 
+
+## <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank" name="features">©️ MagistrKim 2024</a>    
