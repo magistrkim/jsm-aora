@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import FormField from "./../../components/FormField";
 import { Video, ResizeMode } from "expo-av";
 import { icons } from "../../constants";
+import CustomButton from "../../components/CustomButton";
 
 const Create = () => {
   const [uploading, setUploading] = useState(false);
@@ -13,6 +14,8 @@ const Create = () => {
     thumbnail: null,
     prompt: "",
   });
+
+  const submit = () => {};
   return (
     <SafeAreaView className="h-full bg-primary">
       <ScrollView className="px-4 my-6">
@@ -22,9 +25,9 @@ const Create = () => {
           value={form.title}
           placeholder="Give your video a catch title..."
           handleChangeText={(event) => setForm({ ...form, title: event })}
-          otherStyles="mt-10"
+          otherStyles="mt-7"
         />
-        <View className="mt-7 space-y-2">
+        <View className="mt-5 space-y-2">
           <Text className="font-pmedium text-base text-gray-100">
             Upload Video
           </Text>
@@ -50,6 +53,47 @@ const Create = () => {
             )}
           </TouchableOpacity>
         </View>
+        <View className="mt-5 space-y-2">
+          <Text className="font-pmedium text-base text-gray-100">
+            Thumbnail Image
+          </Text>
+          <TouchableOpacity>
+            {form.thumbnail ? (
+              <Image
+                source={{ uri: form.thumbnail.uri }}
+                className="w-full h-64 rounded-xl"
+                resizeMode="cover"
+              />
+            ) : (
+              <View
+                className="bg-[#0f2a26] w-full h-16 rounded-xl 
+                  justify-center items-center px-4 border-2 border-[#0c2320] flex-row space-x-2"
+              >
+                <Image
+                  source={icons.upload}
+                  resizeMode="contain"
+                  className="w-5 h-5"
+                />
+                <Text className="font-pmedium text-sm text-gray-100">
+                  Choose a file
+                </Text>
+              </View>
+            )}
+          </TouchableOpacity>
+        </View>
+        <FormField
+          title="AI Prompt"
+          value={form.prompt}
+          placeholder="The prompt to create a video"
+          handleChangeText={(event) => setForm({ ...form, prompt: event })}
+          otherStyles="mt-5"
+        />
+        <CustomButton
+          title="Submit & Publish"
+          handlePress={submit}
+          containerStyles="mt-5"
+          isLoading={uploading}
+        />
       </ScrollView>
     </SafeAreaView>
   );
