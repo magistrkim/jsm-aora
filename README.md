@@ -1,9 +1,25 @@
+# AORA - App for sharing video content
 <div align="center">
-  <br />
-    <a href="https://youtu.be/ZBCUegTZF7M?si=ubt0vk70lSjt6DCs" target="_blank">
-      <img src="https://i.postimg.cc/5NR9bxFM/Sora-README.png" alt="Project Banner">
-    </a>
-  <br />
+
+  <table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank">
+        <img src="https://github.com/magistrkim/jsm-aora/assets/115700340/cd2c9231-7e2e-43a5-b106-dc499326041d" alt="Project Image" style="width: 300px;">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank">
+        <img src="https://github.com/magistrkim/jsm-aora/assets/115700340/f5c1c981-9e8a-422f-aa27-3bc3a3fdbb62" alt="Project Image" style="width: 300px;">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank">
+        <img src="https://github.com/magistrkim/jsm-aora/assets/115700340/98619a83-ddbc-4d66-bb19-361c0274d937" alt="Project Image" style="width: 300px;">
+      </a>
+    </td>
+  </tr>
+</table>
 
   <div>
     <img src="https://img.shields.io/badge/-React_Native-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
@@ -17,10 +33,6 @@
 Built with React Native for seamless user experiences, Animatable for captivating animations, and integrated with the dependable backend systems of Appwrite, 
 this app showcases impressive design and functionality, enabling seamless sharing of AI videos within the community.
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
-
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - React Native
@@ -28,6 +40,26 @@ If you're getting started and need assistance or face any bugs, join our active 
 - Nativewind
 - Animatable
 - Appwrite
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank">
+        <img src="https://github.com/magistrkim/jsm-aora/assets/115700340/678ae199-9d53-4e84-8911-2edcc4d38550" alt="Project Image" style="width: 300px;">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank">
+        <img src="https://github.com/magistrkim/jsm-aora/assets/115700340/4eedd79d-cc16-46f5-af33-b51b955d67bd" alt="Project Image" style="width: 300px;">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank">
+        <img src="https://github.com/magistrkim/jsm-aora/assets/115700340/3c275ee6-876f-46dc-a1e6-fddec5d245ed" alt="Project Image" style="width: 300px;">
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## <a name="features">🔋 Features</a>
 
@@ -53,3 +85,22 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 and many more, including code architecture and reusability 
 
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank">
+        <img src="https://github.com/magistrkim/jsm-aora/assets/115700340/959b8de4-920f-46eb-88ee-d8a4b8744fc2" alt="Project Image" style="width: 300px;">
+      </a>
+    </td>
+        <td align="center">
+      <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank">
+        <img src="https://github.com/magistrkim/jsm-aora/assets/115700340/1a070690-4772-4c0f-8221-02d6495d1035" alt="Project Image" style="width: 300px;">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank">
+        <img src="https://github.com/magistrkim/jsm-aora/assets/115700340/c0a14eb1-de5d-488a-9f98-1f3b6cf707f1" alt="Project Image" style="width: 300px;">
+      </a>
+    </td>
+  </tr>
+</table>
