@@ -12,6 +12,11 @@ const VideoCard = ({
   },
 }) => {
   const [play, setPlay] = useState(false);
+  const [heartFilled, setHeartFilled] = useState(false);
+
+  const handleHeartPress = () => {
+    setHeartFilled(!heartFilled);
+  };
   return (
     <View className="flex-col px-4 items-center mb-14">
       <View className="flex-row items-start gap-3">
@@ -38,9 +43,13 @@ const VideoCard = ({
             </Text>
           </View>
         </View>
-        <View className="pt-2">
-          <Image source={icons.menu} className="w-5 h-5" resizeMode="contain" />
-        </View>
+        <TouchableOpacity className="pt-2" onPress={handleHeartPress}>
+          <Image
+            source={heartFilled ? icons.heartFilled : icons.heart}
+            className="w-5 h-5"
+            resizeMode="contain"
+          />
+        </TouchableOpacity>
       </View>
       {play ? (
         <Video
