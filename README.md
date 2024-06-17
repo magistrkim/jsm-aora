@@ -1,4 +1,8 @@
-# AORA - App for sharing video content
+  <div align="center">
+    
+# AORA - App for sharing video content   
+  </div>
+
 <div align="center">
 
   <table>
@@ -105,4 +109,8 @@ and many more, including code architecture and reusability
   </tr>
 </table>
 
+  <div align="center">
+    
 ## <a href="https://www.linkedin.com/in/nataliya-kachor-522170271/" target="_blank" name="features">©️ MagistrKim 2024</a>      
+
+  </div>
